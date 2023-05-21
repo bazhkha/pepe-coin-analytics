@@ -8,6 +8,12 @@ pip install pandas numpy matplotlib networkx requests jinja2
 // https://dune.com/queries/2451707
 ### Query swap transactions 
 ```sql
+-- Default values
+-- {{blockchain}} = ethereum
+-- {{token_address}} = 0x6982508145454Ce325dDbE47a25d4ec3d2311933
+-- {{start_time}} = 2023-04-14
+-- {{end_time}} = 2023-04-15
+
 SELECT
     -- blockchain,
     CONCAT(project, '-', version) AS project,
@@ -32,10 +38,10 @@ SELECT
     tx_from,
     tx_to
 FROM dex.trades
-WHERE blockchain = 'ethereum'
+WHERE blockchain = '{{blockchain}}'
     AND (
-        token_bought_address = 0x6982508145454ce325ddbe47a25d4ec3d2311933
-        OR token_sold_address = 0x6982508145454ce325ddbe47a25d4ec3d2311933
+        token_bought_address = {{token_address}}
+        OR token_sold_address = {{token_address}}
     )
     AND block_time BETWEEN TIMESTAMP '{{start_time}}' AND TIMESTAMP '{{end_time}}'
 ORDER BY block_time
@@ -44,6 +50,12 @@ ORDER BY block_time
 // https://dune.com/queries/2494730
 ### Query event transfer
 ```sql
+-- Default values
+-- {{blockchain}} = ethereum
+-- {{token_address}} = 0x6982508145454Ce325dDbE47a25d4ec3d2311933
+-- {{start_time}} = 2023-04-14
+-- {{end_time}} = 2023-04-15
+
 SELECT
     tx.block_time
     , tx.block_number
@@ -66,13 +78,12 @@ SELECT
     -- , tx.access_list
     -- , evt_transfer."from" AS sender
     -- , evt_transfer."to" AS receiver
-FROM erc20_ethereum.evt_Transfer AS evt_transfer
-LEFT JOIN ethereum.transactions AS tx
+FROM erc20_{{blockchain}}.evt_Transfer AS evt_transfer
+LEFT JOIN {{blockchain}}.transactions AS tx
     ON tx.hash = evt_transfer.evt_tx_hash
     AND tx.block_time BETWEEN TIMESTAMP '{{start_time}}' AND TIMESTAMP '{{end_time}}'
-WHERE evt_transfer.contract_address = 0x6982508145454Ce325dDbE47a25d4ec3d2311933
+WHERE evt_transfer.contract_address = {{token_address}}
     AND evt_transfer.evt_block_time BETWEEN TIMESTAMP '{{start_time}}' AND TIMESTAMP '{{end_time}}'
 ORDER BY 2 DESC
-
 ```
 
