@@ -132,7 +132,7 @@ Các giao dịch `swap` chiếm **75.4%** trong tổng số các giao dịch đ�
 
 ![swap-type-ratio](./img/swap-type-ratio.png)
 
-Điều này diễn tả đúng với disclaimer của PEPE team khi tạo ra token này, chỉ để cho vui và không có giá trị nội tại 🐸
+Điều này diễn tả đúng với disclaimer của PEPE team khi tạo ra token này, chỉ để giải trí và không có giá trị nội tại 🐸.
 
 ![disclaimer](./img/pepe-disclaimer.png)
 
@@ -141,3 +141,18 @@ Các **giao dịch mua** chiếm tỷ trọng lớn kể từ khi PEPE được 
 ![daily-tx](./img/daily-tx.png)
 
 ![buy-sell-pressure.png](./img/buy-sell-pressure.png)
+
+### Volume and Price
+
+Nhìn chung với một meme thì volume của PEPE từ những ngày đầu đã khá lớn so với những token khác trong tình hình thị trường downtrend.
+
+![daily-volume](./img/daily-volume.png)
+
+Có một điều gì đã xảy ra vào ngày 05-05 đã khiến độ fomo của PEPE đạt đỉnh khiến khối lượng giao dịch và giá token PEPE bắt đầu tăng đột biến. Sau đó chỉ 1 ngày, PEPE đạt ATH với **ROI ~380 nghìn lần**.
+> j4f: Nếu đầu tư $1 vào PEPE vào ngày 14-04 và bán vào ngày 06-05 thì bạn sẽ có $380,000 🤑
+
+![hourly-price](./img/hourly-price.png)
+
+Vì là một token trên Ethereum nên thanh khoản tập trung hầu hết trên Uniswap.
+
+![market-share](./img/market-share.png)
