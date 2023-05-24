@@ -123,3 +123,21 @@ Trong ngày đầu tiên khi thanh khoản được cung cấp, đã có **61 "e
 
 
 ### Giao dịch 
+
+Ngoài `swap` và `transfer` thì gần như token PEPE không được sử dụng trong bất kỳ trường hợp nào khác.
+
+![methods](./img/methods.png)
+
+Các giao dịch `swap` chiếm **75.4%** trong tổng số các giao dịch đã thực thi. Chiếm phần lớn trong số 24.6% các giao dịch còn lại là các giao dịch `transfer`.
+
+![swap-type-ratio](./img/swap-type-ratio.png)
+
+Điều này diễn tả đúng với disclaimer của PEPE team khi tạo ra token này, chỉ để cho vui và không có giá trị nội tại 🐸
+
+![disclaimer](./img/pepe-disclaimer.png)
+
+Các **giao dịch mua** chiếm tỷ trọng lớn kể từ khi PEPE được giao dịch.
+
+![daily-tx](./img/daily-tx.png)
+
+![buy-sell-pressure.png](./img/buy-sell-pressure.png)
