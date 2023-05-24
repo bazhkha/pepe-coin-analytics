@@ -1,12 +1,34 @@
-# pepe-coin-analytics
+# Phân tích PEPE Token 🐸
 
-## Query data from Dune analytics
+## Mô tả
+[PEPE](https://www.pepe.vip/) là một token ERC20, được tạo ra bởi một (hoặc một nhóm) người ẩn danh trên mạng lưới Blockchain Ethereum vào ngày [14-04-2023](https://etherscan.io/tx/0x2afae7763487e60b893cb57803694810e6d3d136186a6de6719921afd7ca304a). Giá trị của 1 $PEPE đạt đỉnh vào ngày 05-05-2023, tăng khoảng **380,000 lần** so với ngày đầu phát hành. Với hơn **800,000 giao dịch** (tính đến ngày 21-05-2023).
 
-## Install
+Vậy có gì trong những giao dịch này? Điều gì khiến một chú ếch xanh có bước nhảy hàng trăm nghìn lần như thế, những ai đã tác động đến thị trường của PEPE? Và một người bình thường có thể đạt được lợi nhuận thông qua việc giao dịch PEPE không?
+
+Thông qua quá trình phân tích dữ liệu onchain của PEPE, sẽ một phần nào đó trả lời được những câu hỏi trên và tìm ra một số pattern của các cá voi khi trading meme token.
+
+![PEPE meme](https://assets.teenvogue.com/photos/57ebd71b82c30dac286b6150/16:9/w_1280,c_limit/pepe-fb.jpg)
+
+## Cài đặt và lấy dữ liệu
+
+**1. Cài đặt môi trường và thư viện (Cho việc phân tích dữ liệu)**
+
+- Môi trường: Python
+- Cài đặt thư viện:
+```bash
 pip install pandas numpy matplotlib networkx requests jinja2
+```
 
-// https://dune.com/queries/2451707
-### Query swap transactions 
+**2. Lấy dữ liệu bằng Dune Analytics**
+
+Dữ liệu trên Blockchain có thể được lấy bằng nhiều cách khác nhau, trong đó sử dụng **[Dune Analytics](https://dune.com/browse/dashboards)** là một cách nhanh chóng và tiện lợi để lấy dữ liệu onchain đã được decode.
+
+Các bạn có thể tự tạo query để lấy dữ liệu giao dịch của PEPE hoặc sử dụng các câu query dưới đây:
+
+> Do Dune giới hạn dung lượng download file csv là 1GB và 2 bảng `erc20_ethereum.evt_Transfer` và `dex.trades` trên Dune có khối lượng dữ liệu lớn nên việc join 2 bảng tốn khá nhiều thời gian. Do đó mình tách làm 2 câu query và thực hiện việc join bằng pandas.
+
+[1. Get swap transacions](https://dune.com/queries/2451707)
+### 
 ```sql
 -- Default values
 -- {{blockchain}} = ethereum
@@ -47,8 +69,8 @@ WHERE blockchain = '{{blockchain}}'
 ORDER BY block_time
 ```
 
-// https://dune.com/queries/2494730
-### Query event transfer
+[Get transfer transactions](https://dune.com/queries/2494730)
+###
 ```sql
 -- Default values
 -- {{blockchain}} = ethereum
@@ -87,3 +109,17 @@ WHERE evt_transfer.contract_address = {{token_address}}
 ORDER BY 2 DESC
 ```
 
+## Phân tích
+
+### Tổng quan
+Trong gần 40 ngày giao dịch đã có:
+    
+- **822,804 giao dịch** được thực hiện
+- **183,322 users**
+- Tổng Khối lượng giao dịch đạt hơn **5 tỷ đô**
+- Tổng số ETH trả cho phí giao dịch: **12,064 ETH**
+
+Trong ngày đầu tiên khi thanh khoản được cung cấp, đã có **61 "early bird"** (address) được tạo ra chỉ để mua PEPE. Những address này không phải ngẫu nhiên mà đều có sự liên kết với cách thức giao dịch giống nhau. Mình tìm được 3 nhóm address như hình bên dưới, các address khác cũng có phương thức tương tự nhưng chuyển vào các ví mới nên mình chưa tìm được sự liên kết.
+
+
+### Giao dịch 
