@@ -156,3 +156,41 @@ Có một điều gì đã xảy ra vào ngày 05-05 đã khiến độ fomo c�
 Vì là một token trên Ethereum nên thanh khoản tập trung hầu hết trên Uniswap.
 
 ![market-share](./img/market-share.png)
+
+### Vậy những ai đã làm khiến PEPE trở nên hấp dẫn như vậy?
+
+**Top 10 khối lượng giao dịch**
+
+|    | Address  | Note  | Volume |
+|----|----------|-------|--------|
+| 1  | 0xae2fc483527b8ef99eb5d9b44875f005ba1fae13 | jaredfromsubway.eth, MEV | $596,395,801 |
+| 2  | 0xd985c35f566c9de55df16ade36852b0c40f4bf59 | MEV | $159,873,310 |
+| 3  | 0xf1d307906edc902dc2c392af2880f43a55d3583a | MEV | $94,425,641 |
+| 4  | 0xb722e4d12d4c0ec0309856e32c4f7df9c05a11fb | MEV | $66,011,846 |
+| 5  | 0x758e8229dd38cf11fa9e7c0d5f790b4ca16b3b16 | MEV | $61,443,605 |
+| 6  | 0xb58555fcba6479fced7de1485eb054943a09af7b | MEV | $55,737,365 |
+| 7  | 0x381b7d64303a2a5251ac12ee147ffdb337da5969 | MEV | $51,931,828 |
+| 8  | 0xd9d9cb8037d8a11a511398c3a790ded9bdf21b08 | *🀢🀣🀤🀥.eth | $42,040,175 |
+| 9  | 0x76f36d497b51e48a288f03b4c1d7461e92247d5e | MEV | $41,181,994 |
+| 10 | 0xa009fa1ac416ec02f6f902a3a4a584b092ae6123 | MEV | $40,206,754 |
+
+> MEV Bot ở khắp mọi nơi 🤖
+
+![mev-meme](https://pbs.twimg.com/media/EjLRqs-XgAUSL8g?format=jpg&name=900x900)
+
+**Top 10 RealizedPnL**
+
+> RealizedPnL của một address được tính dựa trên các giao dịch swap onchain của ví đó (Không bao gồm việc chuyển token sang các ví khác hay chuyển token lên các sàn tập trung)
+
+|    | Address  | Note  | Number of swaps | RealizedPnL |
+|----|----------|-------|-----------------|-------------|
+| 1  | 0xb722e4d12d4c0ec0309856e32c4f7df9c05a11fb | MEV | 1882 | $66,011,846 |
+| 2  | 0xfd9ce48c96617bf6ccc7c37044b1a22638b71e02 |  | 477 | $11,263,332 |
+| 3  | 0xc32ad590d92db58931dcedd99e10d077530ccaa9 |  | 49  | $10,035,381 |
+| 4  | 0x511d452b738b3f1ada0e74e7a3412f5d975fc548 | MEV | 705 | $9,564,909 |
+| 5  | 0x4a2c786651229175407d3a2d405d1998bcf40614 | dimethyltryptamine.eth  | 508 | $9,096,246 |
+| 6  | 0x2cc9aecaec5a7577d27b80afb70b8fda55ee68c0 |  | 211 | $7,549,952 |
+| 7  | 0x03770b07c5c315722c5866e64cde04e6e5793714 |  | 127 | $7,144,450 |
+| 8  | 0x45cf108e79374ad324904c22847569609f48e33c |  | 319 | $7,138,063 |
+| 9  | 0x31a9ec3a6e29039c74723e387de42b79e6856fd8 | MEV | 514 | $6,598,426 |
+| 10 | 0xcffff9aa43accc00dd58e76159e9e1789b4b30ee |  | 415 | $5,945,858 |
