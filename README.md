@@ -176,7 +176,7 @@ Vì là một token trên Ethereum nên thanh khoản tập trung hầu hết tr
 
 > MEV Bot ở khắp mọi nơi 🤖
 
-![mev-meme](https://pbs.twimg.com/media/EjLRqs-XgAUSL8g?format=jpg&name=900x900)
+![mev-meme](./img/mev-meme.jpeg)
 
 **Top 10 RealizedPnL**
 
@@ -194,3 +194,6 @@ Vì là một token trên Ethereum nên thanh khoản tập trung hầu hết tr
 | 8  | 0x45cf108e79374ad324904c22847569609f48e33c |  | 319 | $7,138,063 |
 | 9  | 0x31a9ec3a6e29039c74723e387de42b79e6856fd8 | MEV | 514 | $6,598,426 |
 | 10 | 0xcffff9aa43accc00dd58e76159e9e1789b4b30ee |  | 415 | $5,945,858 |
+
+
+![to-be-continued-meme](./img/to-be-continued-meme.jpeg)
