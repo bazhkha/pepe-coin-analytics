@@ -27,7 +27,7 @@ Các bạn có thể tự tạo query để lấy dữ liệu giao dịch của 
 
 > Do Dune giới hạn dung lượng download file csv là 1GB và 2 bảng `erc20_ethereum.evt_Transfer` và `dex.trades` trên Dune có khối lượng dữ liệu lớn nên việc join 2 bảng tốn khá nhiều thời gian. Do đó mình tách làm 2 câu query và thực hiện việc join bằng pandas.
 
-[1. Get swap transacions](https://dune.com/queries/2451707)
+[Get swap transacions](https://dune.com/queries/2451707)
 ### 
 ```sql
 -- Default values
